@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".MenuActivty"> </activity>
+        <activity android:name=".MenuActivity"> </activity>
+        <activity android:name=".Menu_Chips"> </activity>
     </application>
 
 </manifest>
