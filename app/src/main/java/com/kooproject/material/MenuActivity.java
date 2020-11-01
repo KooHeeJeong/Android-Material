@@ -25,8 +25,8 @@ public class MenuActivity extends AppCompatActivity {
         llm = new LinearLayoutManager(this);
 
         MenuList = new ArrayList();
-        MenuList.add("Chips");
-        MenuList.add("메뉴 2번가");
+        MenuList.add("BottomNavigation");
+        MenuList.add("Snackbars");
         MenuList.add("메뉴 3번가");
         MenuList.add("메뉴 4번가");
         MenuList.add("메뉴 5번가");
@@ -57,9 +57,18 @@ public class MenuActivity extends AppCompatActivity {
     private void intentmenu(int position, String menuname){
         switch (menuname){
             case "Chips" :
-                Intent intent = new Intent(MenuActivity.this,Menu_Chips.class);
-                startActivity(intent);
+                Intent intent_chips = new Intent(MenuActivity.this,Menu_Chips.class);
+                startActivity(intent_chips);
                 break;
+            case "BottomNavigation" :
+                Intent intent_bottomnavi = new Intent(MenuActivity.this, Menu_BottomNavigation.class);
+                startActivity(intent_bottomnavi);
+                break;
+            case "Snackbars" :
+                Intent intent_snackbars = new Intent(MenuActivity.this, Menu_Snackbars.class);
+                startActivity(intent_snackbars);
+                break;
+
         }
     }
 }
