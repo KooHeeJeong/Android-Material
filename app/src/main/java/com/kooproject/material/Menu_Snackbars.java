@@ -1,5 +1,6 @@
 package com.kooproject.material;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -23,16 +24,25 @@ public class Menu_Snackbars extends AppCompatActivity {
         btn_toast.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(Menu_Snackbars.this,"Toast메세지",Toast.LENGTH_SHORT).show();
+                Toast.makeText(Menu_Snackbars.this, "Toast메세지", Toast.LENGTH_SHORT).show();
             }
         });
 
         btn_snack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view,"SnackBars",Snackbar.LENGTH_SHORT).show();
+                final Snackbar snackbar = Snackbar.make(view, "SnackBars", Snackbar.LENGTH_INDEFINITE);
+                snackbar.setAction("dismiss", new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        snackbar.dismiss();
+                    }
+                })
+                        .setTextColor(Color.parseColor("#FEDBD0"))
+                        .setActionTextColor(Color.parseColor("#FEDBD0"))
+                        .setBackgroundTint(Color.parseColor("#442C2E"))
+                        .show();
             }
         });
-
     }
 }
