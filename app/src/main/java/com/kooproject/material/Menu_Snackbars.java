@@ -25,7 +25,7 @@ public class Menu_Snackbars extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Toast.makeText(Menu_Snackbars.this, "Toast메세지", Toast.LENGTH_SHORT).show();
-                //GIT CHECK
+                //GIT CHECKING
             }
         });
 
