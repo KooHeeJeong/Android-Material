@@ -27,7 +27,7 @@ public class MenuActivity extends AppCompatActivity {
         MenuList = new ArrayList();
         MenuList.add("BottomNavigation");
         MenuList.add("Snackbars");
-        MenuList.add("메뉴 3번가");
+        MenuList.add("ProgressIndicators");
         MenuList.add("메뉴 4번가");
         MenuList.add("메뉴 5번가");
         MenuList.add("메뉴 6번가");
@@ -68,6 +68,9 @@ public class MenuActivity extends AppCompatActivity {
                 Intent intent_snackbars = new Intent(MenuActivity.this, Menu_Snackbars.class);
                 startActivity(intent_snackbars);
                 break;
+            case "ProgressIndicators" :
+                Intent intent_progress = new Intent(MenuActivity.this, Menu_ProgressIndicators.class);
+                startActivity(intent_progress);
 
         }
     }
